@@ -7,7 +7,6 @@ urlpatterns = [
     path('projects/<int:pk>/upload-image/', ProjectImageUploadView.as_view(), name='project-image-upload'),
     path('projects/delete/', ProjectDeleteMultipleView.as_view(), name='project-soft-delete'),
     path('projects/<int:pk>/download/', ProjectCSVDownloadView.as_view(), name='project-csv-download'),
-
     path('projects/<int:project_id>/tasks/', TaskListCreateView.as_view(), name='task-list-create'),
     path('projects/<int:project_id>/tasks/<int:pk>/', TaskRetrieveUpdateDestroyView.as_view(), name='task-detail'),
 ]

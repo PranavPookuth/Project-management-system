@@ -17,7 +17,6 @@ def log_user_action(request, user, action):
         user_agent=request.META.get('HTTP_USER_AGENT', ''),
     )
 
-
 class RegisterView(APIView):
     permission_classes = [AllowAny]
 

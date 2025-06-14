@@ -51,7 +51,6 @@ class ProjectCSVDownloadView(generics.GenericAPIView):
         writer.writerow([project.name, project.description, project.start_date, project.end_date, project.duration])
         return response
 
-# Task Views (nested)
 class TaskListCreateView(generics.ListCreateAPIView):
     serializer_class = TaskSerializer
     permission_classes = [permissions.IsAuthenticated]
